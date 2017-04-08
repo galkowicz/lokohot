@@ -1,22 +1,19 @@
 <template>
-  <div class="hello">
+  <div class="main-page">
+    <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <div class="options container">
+      <ul>
+        <li>
+          <div class="login btn-large btn-block section">
+            <router-view to="/register"></router-view>
+            LOGIN
+          </div>
+        </li>
+        <div class="new-user btn-large btn-block section">NEW USER</div>
+        <div class="on-the-fly btn-large btn-block section">ON THE FLY</div>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -50,4 +47,12 @@ li {
 a {
   color: #42b983;
 }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btn-large {
+    flex-basis: content;
+  }
 </style>
